@@ -1,2 +1,2 @@
 "# yelpCamp" 
-"# yelpCamp" 
+A blog for campers!
