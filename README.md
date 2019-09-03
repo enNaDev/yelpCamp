@@ -1,2 +1,3 @@
 "# yelpCamp" 
 A blog for campers!
+####HTML/CSS, JavaScript, EJS, nodeJS, Express, mongoDB
