@@ -1,17 +1,18 @@
-var express     = require("express"),
-    app         = express(),
-    bodyParser  = require("body-parser"),
-    mongoose    = require("mongoose"),
-    flash       = require("connect-flash"),
-    passport    = require("passport"),
-    LocalStrategy = require("passport-local"),
+var express        = require("express"),
+    bodyParser     = require("body-parser"),
+    mongoose       = require("mongoose"),
+    flash          = require("connect-flash"),
+    passport       = require("passport"),
+    LocalStrategy  = require("passport-local"),
     methodOverride = require("method-override"),
-    Campground  = require("./models/campground"),
-    Comment     = require("./models/comment"),
-    User        = require("./models/user"),
-    seedDB      = require("./seeds")
+    Campground     = require("./models/campground"),
+    Comment        = require("./models/comment"),
+    User           = require("./models/user"),
+    seedDB         = require("./seeds")
     
-//requiring routes
+var app = express();
+
+// Requiring routes
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
@@ -26,7 +27,7 @@ app.use(methodOverride("_method"));
 app.use(flash());
 // seedDB(); //seed the database
 
-// PASSPORT CONFIGURATION
+// Passport Configuration
 app.use(require("express-session")({
     secret: "Once again Rusty wins cutest dog!",
     resave: false,
